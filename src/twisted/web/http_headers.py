@@ -254,7 +254,8 @@ class Headers(object):
         capitalization.
         """
         for k, v in self._rawHeaders.items():
-            yield self._canonicalNameCaps(k), v
+            # don't capitalize headers... yield self._canonicalNameCaps(k), v
+            yield k, v
 
 
     def _canonicalNameCaps(self, name):
